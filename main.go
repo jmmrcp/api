@@ -1,6 +1,8 @@
 package main
 
 import (
+	"github.com/jmmrcp/rest-and-api/store"
+	"net/http"
 	"github.com/gorilla/handlers"
 	"log"
 	"os"
@@ -13,9 +15,7 @@ func main() {
 	}
 	router := store.NewRouter()
 
-	allowedOrigins := handlers.AllowedOrigins([]string{
-		*,
-	})
+	allowedOrigins := handlers.AllowedOrigins([]string{*})
 	allowedMethods := handlers.AllowedMethods([]string{
 		"GET",
 		"POST",
