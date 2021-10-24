@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/jmmrcp/rest-and-api/store"
+	"github.com/jmmrcp/api/store"
 	"net/http"
 	"github.com/gorilla/handlers"
 	"log"

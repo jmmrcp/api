@@ -6,7 +6,7 @@ import (
 )
 
 var controller = &Controller {
-	Repository: Repository {}
+	Repository: Repository {},
 }
 
 type Route struct {
@@ -23,13 +23,14 @@ var routes = Routes {
 		"Authentication",
 		"POST",
 		"/get-token",
-		controller.GetToken
+		controller.GetToken,
 	},
 	Route {
 		"Index",
 		"GET",
 		"/",
-		controller.Index
+		controller.Index,
+  },
 }
 
 func NewRouter() *mux.Router {
@@ -44,6 +45,6 @@ func NewRouter() *mux.Router {
 		 Path(route.Pattern).
 		 Name(route.Name).
 		 Handler(handler)
-}
+  }
 return router
 }
